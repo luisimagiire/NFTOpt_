@@ -5,12 +5,9 @@
 # Contents
 1. [PREPARATION](#preparation)
 2. [SMART CONTRACTS](#smart-contracts)
-3. [SUBGRAPHS](#subgraphs)
-4. [FRONTEND](#frontend)
-5. [TUTORIAL](#tutorial)
+3. [FRONTEND](#frontend)
+4. [TUTORIAL](#tutorial)
 
-<br>
-<br>
 
 ## PREPARATION<br>
 <br>
@@ -48,45 +45,12 @@ A live ETH (Ganache) node under HardHat management; closing the console will req
 
 **_Publish smart contracts_** on local blockchain node
 
-`npm run "solidity publish all"`
+`npm run "blockchain publish all"`
 
 When successful, this task generates the following files:<br>
 
 - addresses of contracts deployed by `scripts/publish/all.ts` are outputted in `./addresses.json`<br>
 - Graph generator JSON files are outputted in `./graphs/{name}/config.JSON`<br>
-
-<br>
-
-## SUBGRAPHS<br>
-
-<br>
-
-_These steps are optional, as the app can work without a Graph node, albeit with reduced functionality_<br>
-<br>
-
-**_Clone and build Graph (GRT)_** for local deployment<br>
-
-Consult the [README](https://github.com/graphprotocol/graph-node/blob/master/README.md) of [graph-node](https://github.com/graphprotocol/graph-node) GitHub repo<br>
-⚠️ Store cloned _graph-node_ repo **one level above** ( `../` ) _this_ project's location on disk ⚠️<br>
-
-<br>
-
-**_Start ipfs node_** ⚠️ _Run in a separate terminal session_ ⚠️
-
-`npm run "start ipfs"`<br>
-
-<br>
-
-**_Start graph node_** ⚠️ _Run in a separate terminal session_ ⚠️
-
-`npm run "start graph"`<br>
-
-<br>
-
-**_Create and publish indexer nodes_** on local graph node
-
-`npm run "graph generate all"`<br>
-`npm run "graph publish all"`<br>
 
 <br>
 

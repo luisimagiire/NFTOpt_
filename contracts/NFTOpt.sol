@@ -148,9 +148,6 @@ contract NFTOpt {
         uint strikePrice_ = options[_optionID].strikePrice;
         if (msg.value != strikePrice_) revert INVALID_STRIKE_PRICE_AMOUNT(strikePrice_);
 
-        /// @dev TODO: perhaps check that interval + block.timestamp don't overflow
-        // if (block.timestamp + options[_optionID].interval < block.timestamp) revert UNSIGNED_INTEGER_OVERFLOW();
-
         /// @dev Update storage -- options
         Option storage option_ = options[_optionID];
 

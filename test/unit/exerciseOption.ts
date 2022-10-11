@@ -52,7 +52,7 @@ describe("exerciseOption", function () {
         NFTOptContract.connect(seller).createOption(0, { value: dummyOptionRequest.strikePrice });
         await NFTOptContract.connect(seller).createOption(1, { value: dummyOptionRequest.strikePrice });
 
-        // Load option details -- TODO: store as Option struct; need to transform, as Solidity returns tuples
+        // Load option details
         optionAmerican = await NFTOptContract.options(0);
         optionEuropean = await NFTOptContract.options(1);
     });
